@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    tty: true
+    # srcにnext.jsアプリを作成していくため
+    volumes:
+      - ./src:/app
+    command: yarn dev
