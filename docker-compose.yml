@@ -4,9 +4,9 @@ services:
     build:
       context: .
     tty: true
-    # srcにnext.jsアプリを作成していくため
+    # ホームディレクトリに対してnext.jsアプリを実装する
     volumes:
-      - ./src:/app
+      - ./:/app
     ports:
       - '3000:3000'
     command: yarn dev
