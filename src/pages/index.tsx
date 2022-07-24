@@ -1,5 +1,6 @@
 import type { Liff } from "@line/liff";
 import type { NextPage } from "next";
+import Link from "next/link";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
@@ -17,6 +18,9 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
 
       <main className={styles.main}>
         <h1>create-liff-app</h1>
+        <Link href='https://google.co.jp'>
+          <a target='_blank'>google サイト</a>
+        </Link>
         {liff && <p>LIFF init succeeded.</p>}
         {liffError && (
           <>
