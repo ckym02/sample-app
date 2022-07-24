@@ -19,8 +19,9 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
       <main className={styles.main}>
         <h1>create-liff-app</h1>
         <Link href='https://google.co.jp'>
-          <a target='_blank'>google サイト</a>
+          <a target='_blank'>google サイト（新しいタブで開く）</a>
         </Link>
+        <Link href='https://google.co.jp'>google サイト</Link>
         {liff && <p>LIFF init succeeded.</p>}
         {liffError && (
           <>
