@@ -9,10 +9,16 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
   liffError
 }) => {
 
-  const openWindow = () =>{
+  const openWindowtrue = () =>{
     liff?.openWindow({
       url: "https://google.co.jp",
       external: true
+    });
+  }
+
+  const openWindowfalse = () =>{
+    liff?.openWindow({
+      url: "https://google.co.jp",
     });
   }
 
@@ -30,7 +36,8 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
           <a target='_blank'>google サイト（新しいタブで開く）</a>
         </Link>
         <Link href='https://google.co.jp'>google サイト</Link>
-        <button onClick={openWindow}>google サイト（外部ブラウザで開く）</button>
+        <button onClick={openWindowtrue}>google サイト（openWindow true）</button>
+        <button onClick={openWindowfalse}>google サイト（openWindow false）</button>
         {liff && <p>LIFF init succeeded.</p>}
         {liffError && (
           <>
