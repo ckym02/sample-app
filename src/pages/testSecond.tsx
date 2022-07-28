@@ -2,7 +2,6 @@ import type { Liff } from "@line/liff";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
   liff,
@@ -17,8 +16,7 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
       </Head>
 
       <main className={styles.main}>
-        <h1>遷移後のテストページ</h1>
-        <Link href='/testSecond' passHref>テストページ（２）に遷移</Link>
+        <h1>遷移後のテストページ（２）</h1>
         {liff && <p>LIFF init succeeded.</p>}
         {liffError && (
           <>
