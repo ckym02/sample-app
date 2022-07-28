@@ -38,6 +38,7 @@ const Home: NextPage<{ liff: Liff | null; liffError: string | null }> = ({
         <Link href='https://google.co.jp'>google サイト</Link>
         <button onClick={openWindowtrue}>google サイト（openWindow true）</button>
         <button onClick={openWindowfalse}>google サイト（openWindow false）</button>
+        <Link href='/test' passHref>テストページに遷移</Link>
         {liff && <p>LIFF init succeeded.</p>}
         {liffError && (
           <>
